@@ -1,0 +1,28 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful selector agent. You can select proper widgets based on information I provided to complete the task."
+    },
+    {
+      "role": "user",
+      "content": {
+        "task": "",
+        "action_history": [],
+        "current_activity": "",
+        "widgets": [
+        ]
+      }
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "action": "",
+          "target": "",
+          "input_text": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+In the movie show, select the first movie under 'Now Showing' and click the 'Want to Watch' button. Check if the 'Want to Watch' button turns gray and the text changes to 'Wanted'.
+In the content provider view, input a student info with name='ai01' and grade='A', then click 'Add Item'. Check if there is a Toast showing with text starts with 'added'.
+
+
+
