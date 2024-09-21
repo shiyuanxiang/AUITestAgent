@@ -31,10 +31,10 @@ class DriverHelper:
             cls.driver = None
 
     @classmethod
-    def scroll_all(cls):
+    def scroll_all(cls, scroll_times=3):
         driver = cls.get_driver()
         end_y = driver.get_window_size()['height'] / 3
         start_y = driver.get_window_size()['height'] * 2 / 3
         _x = driver.get_window_size()['width'] / 2
-        for i in range(5):
+        for i in range(scroll_times):
             driver.swipe(start_x=_x, start_y=start_y, end_x=_x, end_y=end_y, duration=500)

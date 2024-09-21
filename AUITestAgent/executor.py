@@ -18,17 +18,19 @@ class Executor:
                 {
                   "action": "click",
                   "target": "com.example.wick:id/page1",
-                  "input text": ""
+                  "input_text": ""
                 }
         :return: None
         """
         driver = DriverHelper.get_driver()
+        ele = driver.find_element(By.ID, action["target"])
+
         if action["action"] == "click":
-            driver.find_element(By.ID, action["target"]).click()
+            ele.click()
         elif action["action"] == "input":
-            driver.find_element(By.ID, action["target"]).send_keys(action["input text"])
+            ele.send_keys(action["input_text"])
         elif action["action"] == "scroll":
-            DriverHelper.scroll_all()
+            DriverHelper.scroll_all(scroll_times=1)
         elif action["action"] == "back":
             driver.back()
         else:

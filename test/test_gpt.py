@@ -3,6 +3,8 @@ from openai import OpenAI
 api_key = "sk-9FZknAIsf7vqPAZKM5L1GGBnyE1oCrKGe9qBV0U8vK7RfRdG"
 client = OpenAI(api_key=api_key, base_url="https://api.deepbricks.ai/v1/")
 
+# api_key = "sk-qvIb9KPOzXv3rMAe864754C7B9F44e649e8624A056F4D084"
+# client = OpenAI(api_key=api_key)
 chat_log = [{"role": "system", "content": "You are a helpful language translation (Chinese and English) assistant."}, ]
 response = client.chat.completions.create(
     model="gpt-4o-mini",
