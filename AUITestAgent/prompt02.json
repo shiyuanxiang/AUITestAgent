@@ -1,0 +1,96 @@
+[
+  {
+    "role": "system",
+    "content": "The format of my input a json string: {'task':'', 'action_history':[], 'current_activity':'', 'widgets':[]}. The format of your answer should be a json string: [{'action': '', 'target': '', 'input_text':''}, ...], and the 'target' can only be selected from the 'widgets' field I provided."
+  },
+  {
+    "role": "system",
+    "content": "There can't be irrelevant words in your answer, please follow the answer format strictly which is just a json string. Make sure your answer is a valid json string."
+  },
+  {
+    "role": "system",
+    "content": "The button view can not be input. EditText can be input."
+  },
+  {
+    "role": "system",
+    "content": "The format of your answer should be a json string: [{'action': '', 'target': '', 'input_text':''}, ...], remember there is 3 field 'action', 'target' and 'input_text', all of them should be in the answer."
+  },
+  {
+    "role": "system",
+    "content": "The 'target' and 'input_text' of 'back' action should be empty ''."
+  },
+  {
+    "role": "system",
+    "content": "You should select the targets from widgets information, if you find any abnormal, don't report just output a valid json string you think maybe work."
+  },
+   {
+    "role": "system",
+    "content": "Your answer should be a valid json string."
+  },
+  {
+    "role": "user",
+    "content": {
+      "task": "In the content provider view, input a student info with name='ai01' and grade='A', then click 'Add Item'. Check if there is a Toast showing with text starts with 'added'.",
+      "action_history": [],
+      "current_activity": "com.example.wick.MainActivity",
+      "widgets": [
+        "com.example.wick:id/getAccount with text 'Get Account' is a android.widget.Button which can be clickable, focusable.",
+        "com.example.wick:id/goToActivity with text 'Go To Activity' is a android.widget.Button which can be clickable, focusable.",
+        "com.example.wick:id/nextActivity with text 'Next Activity' is a android.widget.Button which can be clickable, focusable.",
+        "com.example.wick:id/activityInfo with text 'Activity Info' is a android.widget.Button which can be clickable, focusable.",
+        "com.example.wick:id/BroadcastTest with text 'BroadcastTest' is a android.widget.Button which can be clickable, focusable.",
+        "com.example.wick:id/ContentProviderTestBt with text 'ContentProviderTest' is a android.widget.Button which can be clickable, focusable.",
+        "com.example.wick:id/ServiceTest with text 'ServiceTest' is a android.widget.Button which can be clickable, focusable.",
+        "com.example.wick:id/button8 with text 'Button 8' is a android.widget.Button which can be clickable, focusable."
+      ]
+    }
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "action": "click",
+        "target": "com.example.wick:id/ContentProviderTestBt",
+        "input_text": ""
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": {
+      "task": "In the content provider view, input a student info with name='ai01' and grade='A', then click 'Add Item'. Check if there is a Toast showing with text starts with 'added'.",
+      "action_history": [
+        "click on com.example.wick:id/ContentProviderTestBt"
+      ],
+      "current_activity": "com.example.wick.ContentProviderTestActivity",
+      "widgets": [
+        "com.example.wick:id/name with text 'Name' is a android.widget.EditText which can be clickable, focusable, long-clickable.",
+        "com.example.wick:id/grade with text 'Grade' is a android.widget.EditText which can be clickable, focusable, long-clickable.",
+        "com.example.wick:id/updateButton with text 'Update Item' is a android.widget.Button which can be clickable, focusable.",
+        "com.example.wick:id/deleteButton with text 'Del Item' is a android.widget.Button which can be clickable, focusable.",
+        "com.example.wick:id/addItemButton with text 'Add Item' is a android.widget.Button which can be clickable, focusable.",
+        "com.example.wick:id/queryButton with text 'Query' is a android.widget.Button which can be clickable, focusable."
+      ]
+    }
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "action": "input",
+        "target": "com.example.wick:id/name",
+        "input_text": "ai01"
+      },
+      {
+        "action": "input",
+        "target": "com.example.wick:id/grade",
+        "input_text": "A"
+      },
+      {
+        "action": "click",
+        "target": "com.example.wick:id/addItemButton",
+        "input_text": ""
+      }
+    ]
+  }
+]

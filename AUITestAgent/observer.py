@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 
-from AUITestAgent.driver_helper import DriverHelper
+from driver_helper import DriverHelper
 import xml.etree.ElementTree as ET
 
 
@@ -8,7 +8,7 @@ class Observer:
     def __init__(self):
         self.ui_hierarchy = []
 
-    def prompt(self):
+    def widgets_prompt(self):
         tmp_list = []
         for widget in self.ui_hierarchy:
             if widget['actions'] != "":
@@ -32,7 +32,7 @@ class Observer:
                 break
         if if_scrollable:
             DriverHelper.scroll_all()
-            
+
         root = ET.fromstring(driver.page_source)
         action_types = ["checkable", "checked", "clickable", "focusable", "long-clickable", "scrollable", "selected"]
         for child in root.iter():
@@ -49,7 +49,7 @@ class Observer:
             widget_info["actions"] = ", ".join(tmp_list)
             self.ui_hierarchy.append(widget_info)
 
-        self.prompt()
+        self.widgets_prompt()
         return self.ui_hierarchy
 
     def get_current_activity(self):

@@ -1,0 +1,76 @@
+[response] {'role': 'assistant', 'content': "[{'action': 'click', 'target': 'com.example.wick:id/goToActivity', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/selector', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/page1', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/page2', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}, {'action': 'back', 'target': '', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/done', 'input_text': ''}]"}
+[activity] .MainActivity
+[action history] []
+[suggest actions] [{'action': 'click', 'target': 'com.example.wick:id/goToActivity', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/selector', 'input_text': ''}, {'action': 'back', 'target': '', 'input_text': ''}]
+[executor] executed {'action': 'click', 'target': 'com.example.wick:id/goToActivity', 'input_text': ''}
+[executor] executed {'action': 'click', 'target': 'com.example.wick:id/selector', 'input_text': ''}
+[executor] go to next activity.
+[response] {'role': 'assistant', 'content': "[{'action': 'click', 'target': 'com.example.wick:id/page1', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}, {'action': 'back', 'target': '', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/done', 'input_text': ''}]"}
+[activity] .TestSelectorActivity
+[action history] ['click on com.example.wick:id/goToActivity', 'click on com.example.wick:id/selector']
+[suggest actions] [{'action': 'click', 'target': 'com.example.wick:id/page1', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}, {'action': 'back', 'target': '', 'input_text': ''}]
+[executor] executed {'action': 'click', 'target': 'com.example.wick:id/page1', 'input_text': ''}
+[executor] go to next activity.
+[response] {'role': 'assistant', 'content': "[{'action': 'click', 'target': 'com.example.wick:id/page2', 'input_text': ''}]"}
+[activity] .Page1Activity
+[action history] ['click on com.example.wick:id/goToActivity', 'click on com.example.wick:id/selector', 'click on com.example.wick:id/page1']
+[suggest actions] [{'action': 'click', 'target': 'com.example.wick:id/page2', 'input_text': ''}]
+[executor] executed {'action': 'click', 'target': 'com.example.wick:id/page2', 'input_text': ''}
+[executor] go to next activity.
+[response] {'role': 'assistant', 'content': "[{'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}]"}
+[activity] .Page2Activity
+[action history] ['click on com.example.wick:id/goToActivity', 'click on com.example.wick:id/selector', 'click on com.example.wick:id/page1', 'click on com.example.wick:id/page2']
+[suggest actions] [{'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}]
+[executor] executed {'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}
+[response] {'role': 'assistant', 'content': "[{'action': 'back', 'target': '', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/done', 'input_text': ''}]"}
+[activity] .Page2Activity
+[action history] ['click on com.example.wick:id/goToActivity', 'click on com.example.wick:id/selector', 'click on com.example.wick:id/page1', 'click on com.example.wick:id/page2', 'click on com.example.wick:id/register']
+[suggest actions] [{'action': 'back', 'target': '', 'input_text': ''}]
+[executor] executed {'action': 'back', 'target': '', 'input_text': ''}
+[executor] go to next activity.
+[response] {'role': 'assistant', 'content': "[{'action': 'click', 'target': 'com.example.wick:id/page2', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}, {'action': 'back', 'target': '', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/done', 'input_text': ''}]"}
+[activity] .Page1Activity
+[action history] ['click on com.example.wick:id/goToActivity', 'click on com.example.wick:id/selector', 'click on com.example.wick:id/page1', 'click on com.example.wick:id/page2', 'click on com.example.wick:id/register', 'back on ']
+[suggest actions] [{'action': 'click', 'target': 'com.example.wick:id/page2', 'input_text': ''}, {'action': 'back', 'target': '', 'input_text': ''}]
+[executor] executed {'action': 'click', 'target': 'com.example.wick:id/page2', 'input_text': ''}
+[executor] go to next activity.
+[response] {'role': 'assistant', 'content': "[{'action': 'click', 'target': 'com.example.wick:id/selector', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/done', 'input_text': ''}]"}
+[activity] .Page2Activity
+[action history] ['click on com.example.wick:id/goToActivity', 'click on com.example.wick:id/selector', 'click on com.example.wick:id/page1', 'click on com.example.wick:id/page2', 'click on com.example.wick:id/register', 'back on ', 'click on com.example.wick:id/page2']
+[suggest actions] []
+[response] {'role': 'assistant', 'content': "[{'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}, {'action': 'back', 'target': '', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/done', 'input_text': ''}]"}
+[activity] .Page2Activity
+[action history] ['click on com.example.wick:id/goToActivity', 'click on com.example.wick:id/selector', 'click on com.example.wick:id/page1', 'click on com.example.wick:id/page2', 'click on com.example.wick:id/register', 'back on ', 'click on com.example.wick:id/page2']
+[suggest actions] [{'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}, {'action': 'back', 'target': '', 'input_text': ''}]
+[executor] executed {'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}
+[executor] executed {'action': 'back', 'target': '', 'input_text': ''}
+[executor] go to next activity.
+[response] {'role': 'assistant', 'content': "[{'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}, {'action': 'back', 'target': '', 'input_text': ''}]"}
+[activity] .Page1Activity
+[action history] ['click on com.example.wick:id/goToActivity', 'click on com.example.wick:id/selector', 'click on com.example.wick:id/page1', 'click on com.example.wick:id/page2', 'click on com.example.wick:id/register', 'back on ', 'click on com.example.wick:id/page2', 'click on com.example.wick:id/register', 'back on ']
+[suggest actions] [{'action': 'back', 'target': '', 'input_text': ''}]
+[executor] executed {'action': 'back', 'target': '', 'input_text': ''}
+[executor] go to next activity.
+[response] {'role': 'assistant', 'content': "[{'action': 'click', 'target': 'com.example.wick:id/button1', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}]"}
+[activity] .TestSelectorActivity
+[action history] ['click on com.example.wick:id/goToActivity', 'click on com.example.wick:id/selector', 'click on com.example.wick:id/page1', 'click on com.example.wick:id/page2', 'click on com.example.wick:id/register', 'back on ', 'click on com.example.wick:id/page2', 'click on com.example.wick:id/register', 'back on ', 'back on ']
+[suggest actions] [{'action': 'click', 'target': 'com.example.wick:id/button1', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}]
+[executor] executed {'action': 'click', 'target': 'com.example.wick:id/button1', 'input_text': ''}
+[executor] executed {'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}
+[response] {'role': 'assistant', 'content': "[{'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}]"}
+[activity] .TestSelectorActivity
+[action history] ['click on com.example.wick:id/goToActivity', 'click on com.example.wick:id/selector', 'click on com.example.wick:id/page1', 'click on com.example.wick:id/page2', 'click on com.example.wick:id/register', 'back on ', 'click on com.example.wick:id/page2', 'click on com.example.wick:id/register', 'back on ', 'back on ', 'click on com.example.wick:id/button1', 'click on com.example.wick:id/register']
+[suggest actions] [{'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}]
+[executor] executed {'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}
+[response] {'role': 'assistant', 'content': "[{'action': 'click', 'target': 'com.example.wick:id/done', 'input_text': ''}]"}
+[activity] .TestSelectorActivity
+[action history] ['click on com.example.wick:id/goToActivity', 'click on com.example.wick:id/selector', 'click on com.example.wick:id/page1', 'click on com.example.wick:id/page2', 'click on com.example.wick:id/register', 'back on ', 'click on com.example.wick:id/page2', 'click on com.example.wick:id/register', 'back on ', 'back on ', 'click on com.example.wick:id/button1', 'click on com.example.wick:id/register', 'click on com.example.wick:id/register']
+[suggest actions] []
+[response] {'role': 'assistant', 'content': "[{'action': 'click', 'target': 'com.example.wick:id/selector', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/done', 'input_text': ''}]"}
+[activity] .TestSelectorActivity
+[action history] ['click on com.example.wick:id/goToActivity', 'click on com.example.wick:id/selector', 'click on com.example.wick:id/page1', 'click on com.example.wick:id/page2', 'click on com.example.wick:id/register', 'back on ', 'click on com.example.wick:id/page2', 'click on com.example.wick:id/register', 'back on ', 'back on ', 'click on com.example.wick:id/button1', 'click on com.example.wick:id/register', 'click on com.example.wick:id/register']
+[suggest actions] []
+[response] {'role': 'assistant', 'content': "[{'action': 'click', 'target': 'com.example.wick:id/page1', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/page2', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}, {'action': 'back', 'target': '', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/button1', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}]"}
+[activity] .TestSelectorActivity
+[action history] ['click on com.example.wick:id/goToActivity', 'click on com.example.wick:id/selector', 'click on com.example.wick:id/page1', 'click on com.example.wick:id/page2', 'click on com.example.wick:id/register', 'back on ', 'click on com.example.wick:id/page2', 'click on com.example.wick:id/register', 'back on ', 'back on ', 'click on com.example.wick:id/button1', 'click on com.example.wick:id/register', 'click on com.example.wick:id/register']
+[suggest actions] [{'action': 'click', 'target': 'com.example.wick:id/page1', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}, {'action': 'back', 'target': '', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/button1', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}, {'action': 'click', 'target': 'com.example.wick:id/register', 'input_text': ''}]

@@ -1,0 +1,80 @@
+[
+  {
+    "role": "system",
+    "content": "The format of your answer should be like 'The number of actions: <action_number>; 1. <action_type> on <widget> [with <input_text>]; 2. ...'. The <widget> in your answer must be one of the widgets I provied, and use 'on' instead of 'into' or other verbs for 'input' action."
+  },
+  {
+    "role": "system",
+    "content": "'[with <input_text>]' is optional, if there is no input text, you can omit it, otherwise you should provide it. For example, 'click on com.example.wick:id/ContentProviderTestBt' is a valid answer. 'input on com.example.wick:id/name with ai01' is also a valid answer."
+  },
+  {
+    "role": "system",
+    "content": "Your answer should be strictly in the format I provided, starts with 'The number of actions: ...', otherwise I may not be able to parse it correctly."
+  },
+  {
+    "role": "user",
+    "content": {
+      "task": "In the content provider view, input a student info with name='ai01' and grade='A', then click 'Add Item'. Check if there is a Toast showing with text starts with 'added'.",
+      "action_history": [],
+      "current_activity": "com.example.wick.MainActivity",
+      "widgets": [
+        "com.example.wick:id/getAccount with text 'Get Account' is a android.widget.Button which can be clickable, focusable.",
+        "com.example.wick:id/goToActivity with text 'Go To Activity' is a android.widget.Button which can be clickable, focusable.",
+        "com.example.wick:id/nextActivity with text 'Next Activity' is a android.widget.Button which can be clickable, focusable.",
+        "com.example.wick:id/activityInfo with text 'Activity Info' is a android.widget.Button which can be clickable, focusable.",
+        "com.example.wick:id/BroadcastTest with text 'BroadcastTest' is a android.widget.Button which can be clickable, focusable.",
+        "com.example.wick:id/ContentProviderTestBt with text 'ContentProviderTest' is a android.widget.Button which can be clickable, focusable.",
+        "com.example.wick:id/ServiceTest with text 'ServiceTest' is a android.widget.Button which can be clickable, focusable.",
+        "com.example.wick:id/button8 with text 'Button 8' is a android.widget.Button which can be clickable, focusable."
+      ]
+    }
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "action": "click",
+        "target": "com.example.wick:id/ContentProviderTestBt",
+        "input_text": ""
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": {
+      "task": "In the content provider view, input a student info with name='ai01' and grade='A', then click 'Add Item'. Check if there is a Toast showing with text starts with 'added'.",
+      "action_history": [
+        "click on com.example.wick:id/ContentProviderTestBt"
+      ],
+      "current_activity": "com.example.wick.ContentProviderTestActivity",
+      "widgets": [
+        "com.example.wick:id/name with text 'Name' is a android.widget.EditText which can be clickable, focusable, long-clickable.",
+        "com.example.wick:id/grade with text 'Grade' is a android.widget.EditText which can be clickable, focusable, long-clickable.",
+        "com.example.wick:id/updateButton with text 'Update Item' is a android.widget.Button which can be clickable, focusable.",
+        "com.example.wick:id/deleteButton with text 'Del Item' is a android.widget.Button which can be clickable, focusable.",
+        "com.example.wick:id/addItemButton with text 'Add Item' is a android.widget.Button which can be clickable, focusable.",
+        "com.example.wick:id/queryButton with text 'Query' is a android.widget.Button which can be clickable, focusable."
+      ]
+    }
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "action": "input",
+        "target": "com.example.wick:id/name",
+        "input_text": "ai01"
+      },
+      {
+        "action": "input",
+        "target": "com.example.wick:id/grade",
+        "input_text": "A"
+      },
+      {
+        "action": "click",
+        "target": "com.example.wick:id/addItemButton",
+        "input_text": ""
+      }
+    ]
+  }
+]

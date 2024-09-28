@@ -11,14 +11,8 @@ from AUITestAgent.driver_helper import DriverHelper
 
 
 def main():
-    driver = DriverHelper.get_driver()
-    driver.find_element(By.ID, "com.example.wick:id/email").send_keys("hello")
-    DriverHelper.scroll_all(scroll_times=1)
-    print("Hello")
-    element = driver.find_element(By.ID, "com.example.wick:id/page1")
-    element.click()
-    print(element.text)
-    driver.back()
+    observer = Observer()
+    print(observer.get_ui_hierarchy())
 
 
 if __name__ == '__main__':

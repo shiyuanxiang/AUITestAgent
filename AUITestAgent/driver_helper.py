@@ -5,7 +5,7 @@ from appium.options.android import UiAutomator2Options
 class DriverHelper:
     driver = None
     pkg_n = 'com.example.wick'
-    start_ac_n = 'com.example.wick.TestSelectorActivity'
+    start_ac_n = 'com.example.wick.MainActivity'
 
     @staticmethod
     def get_driver():
