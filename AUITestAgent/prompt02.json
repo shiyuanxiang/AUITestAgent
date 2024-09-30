@@ -23,9 +23,17 @@
     "role": "system",
     "content": "You should select the targets from widgets information, if you find any abnormal, don't report just output a valid json string you think maybe work."
   },
-   {
+  {
     "role": "system",
     "content": "Your answer should be a valid json string."
+  },
+  {
+    "role": "system",
+    "content": "Each dict in the answer must have 3 fields: 'action', 'target' and 'input_text'."
+  },
+  {
+    "role": "system",
+    "content": "For the 'back' action, it should be {'action':'back', 'target':'', 'input_text':''}. Also with 3 fields."
   },
   {
     "role": "user",

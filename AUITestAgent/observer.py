@@ -1,6 +1,4 @@
-from selenium.webdriver.common.by import By
-
-from driver_helper import DriverHelper
+import requests
 import xml.etree.ElementTree as ET
 
 
@@ -22,18 +20,11 @@ class Observer:
         :return: ["<text> is a <category> which can be <actions>",...]
         """
         self.ui_hierarchy = []
-        driver = DriverHelper.get_driver()
-
-        if_scrollable = False
-        elements = driver.find_elements(By.XPATH, "//*")
-        for element in elements:
-            if element.get_attribute("scrollable") == "true":
-                if_scrollable = True
-                break
-        if if_scrollable:
-            DriverHelper.scroll_all()
-
-        root = ET.fromstring(driver.page_source)
+        response = requests.get('http://localhost:5001/get_page_source')
+        if response.status_code != 200:
+            return self.ui_hierarchy
+        page_source = response.json()['page_source']
+        root = ET.fromstring(page_source)
         action_types = ["checkable", "checked", "clickable", "focusable", "long-clickable", "scrollable", "selected"]
         for child in root.iter():
             widget_info = {
@@ -53,5 +44,7 @@ class Observer:
         return self.ui_hierarchy
 
     def get_current_activity(self):
-        driver = DriverHelper.get_driver()
-        return driver.current_activity
+        response = requests.get('http://localhost:5001/get_current_activity')
+        if response.status_code == 200:
+            return response.json()['current_activity']
+        return None
